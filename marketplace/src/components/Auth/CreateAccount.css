@@ -1,0 +1,59 @@
+.create-account-page {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Updated */
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  background: linear-gradient(-45deg, #AAB0FF, #E2A9FF);
+}
+
+
+.create-account-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: auto; /* remove fixed height */
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* add margin top */
+  margin-bottom: 50px;
+}
+
+.create-account-form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center; /* center the text */
+}
+
+
+.create-account-form input,
+.create-account-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.create-account-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #4a69bd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-account-form button:hover {
+  background-color: #3c4f6d;
+}

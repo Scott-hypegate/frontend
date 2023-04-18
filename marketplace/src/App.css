@@ -1,0 +1,4 @@
+.App {
+  height: 100%; /* Updated this property */
+  background: linear-gradient(-45deg, #AAB0FF, #E2A9FF);
+}

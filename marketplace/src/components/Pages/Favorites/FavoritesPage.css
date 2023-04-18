@@ -1,0 +1,22 @@
+/* FavoritesPage.css */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* FavoritesPage.css */
+.favorites-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100%;
+    position: relative;
+  }
+  
+  .favorites-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,55 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #AAB0FF, #E2A9FF);
+  }
+  
+  .title {
+  font-size: 6rem;
+  color: #6162FF;
+  margin-bottom: 4rem;
+  }
+  
+  .settings-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  padding: 30px;
+  margin: 0px 0px 500px 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px; /* Increased border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .settings-form input,
+  .settings-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 20px; /* Increased border radius */
+  background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .settings-form button {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px; /* Increased border radius */
+  background-color: #6162FF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+  .settings-form button:hover {
+  background-color: #3c4f6d;
+  }

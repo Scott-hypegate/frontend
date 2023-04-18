@@ -1,0 +1,17 @@
+.hypegate-navbar-logo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 80%;  /* changed from 20% */
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    display: flex;
+}

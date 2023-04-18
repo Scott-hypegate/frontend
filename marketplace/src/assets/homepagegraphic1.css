@@ -1,0 +1,16 @@
+.homepagegraphic1 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    z-index: 1;
+}
