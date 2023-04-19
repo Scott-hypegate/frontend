@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './VerticalNavbar.css';
-import { useNavigate, NavLink, Router, Routes, useLocation } from 'react-router-dom';
+import { useNavigate, NavLink, useLocation } from 'react-router-dom';
 
 import { VerticalNavbarContext } from './VerticalNavbarContext';
 import dashboardicon from '../../assets/dashboardicon.svg';

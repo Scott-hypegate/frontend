@@ -9,32 +9,30 @@ html {
 .home {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: 100vh;
   background: linear-gradient(-45deg, #AAB0FF, #E2A9FF);
   overflow: hidden;
 }
 
-.content-wrapper {
+.content-wrapper, .imgContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.title {
-  font-size: 6rem;
-  color: #6162FF;
-  margin-bottom: 5rem;
-  font-weight: 100;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
 }
 
 .button-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Added */
+  text-align: center;
+  height: 100%; /* Added */
+}
+
+.hypegate-splash {
+  margin-bottom: 2rem;
 }
 
 .home-button {
@@ -50,12 +48,14 @@ html {
   text-align: center;
 }
 
-.login-button:hover {
+.home-button:hover {
   background-color: #007bff;
 }
 
-.signup-button:hover {
-  background-color: #007bff;
+.splash-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
-
-

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { auth, getAuth, doc, getDoc, setDoc, updateUserProfileInFirestore } from '../../../firebaseConfig';
+import { auth, doc, getDoc, updateUserProfileInFirestore } from '../../../firebaseConfig';
 import './Settings.css';
 
 const Settings = ({ db }) => {
@@ -9,7 +8,6 @@ const Settings = ({ db }) => {
   const [interests, setInterests] = useState('');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Get the user's data from Firebase

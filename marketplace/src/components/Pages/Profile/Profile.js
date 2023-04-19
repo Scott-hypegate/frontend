@@ -5,7 +5,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 import { auth } from '../../../firebaseConfig';
 import ProfileImage from './ProfileImage';
-import MessageUser from '../Messaging/MessageUser';
 
 const Profile = ({ db }) => {
   const { id } = useParams();
@@ -135,9 +134,9 @@ const Profile = ({ db }) => {
             .map((_, i) => (
               <img
                 key={i}
-                className="gallery-image"
+                className="gallery"
                 src={`https://picsum.photos/300/300?random=${parseInt(id) * (i + 1)}`}
-                alt={`Gallery image ${i + 1}`}
+                alt={`Gallery ${i + 1}`}
               />
             ))}
         </div>

@@ -1,12 +1,10 @@
 import '../../TrendingCreators/TrendingCreators.css';
 import Discover from '../../Discover/Discover';
 import './Dashboard.css';
-import { Router, Routes, Route } from 'react-router-dom';
-import React, { useContext } from 'react';
+import React from 'react';
 import VerticalNavbarContext from '../../VerticalNavbar/VerticalNavbarContext';
 import VerticalNavbar from '../../VerticalNavbar/VerticalNavbar';
-import Home from '../Home/Home';
-import Profile from '../Profile/Profile';
+
 
 function Dashboard({ user, userData, setUserData, db }) {
   if (!db) {

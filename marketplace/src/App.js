@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebaseConfig";
 import Home from "./components/Pages/Home/Home";
@@ -25,7 +25,9 @@ import Chat from './components/Pages/Messaging/Chat';
 import "./App.css";
 
 
-function App(location) {
+
+
+function App(current_location) {
   const [db, setDb] = useState(null);
   const [loading, setLoading] = useState(true);
   const [user, loadingUser] = useAuthState(auth);
@@ -33,6 +35,8 @@ function App(location) {
   const [userData, setUserData] = useState(null);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [favorites, setFavorites] = useState([]);
+
+  const location = useLocation();
 
   const toggleNavbar = useCallback(() => {
     setIsClosed((prevState) => !prevState);
@@ -127,7 +131,7 @@ function App(location) {
       ) : (
         <ErrorBoundary fallback={<h1>Oops! Something went wrong.</h1>}>
           <VerticalNavbarContext.Provider value={{ isClosed, toggleNavbar, user }}>
-            <VerticalNavbar location={location} />
+            {location.pathname !== '/' && <VerticalNavbar location={current_location} />}
             <div style={{ marginLeft: isClosed ? "0" : "180px" }}>
               <Routes>
 
@@ -155,8 +159,8 @@ function App(location) {
                 } />
                 <Route path="/login" element={<Login />} />
                 <Route path="/messaging" element={<Chat db={db}/>} />
-              </Routes>
-              </div>
+                </Routes>
+            </div>
           </VerticalNavbarContext.Provider>
         </ErrorBoundary>
       )}
