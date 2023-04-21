@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between; /* space evenly between child elements */
-  width: 225px;
+  width: 250px; /* Increase the width of the navbar */
   height: 100%;
   background-color: #6162FF;
   padding: 20px 0;
@@ -77,29 +77,34 @@
 .vertical-navbar a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align icon and text to the left */
+  padding-left: 30px; /* Add left padding to align icons */
   color: #fff;
   text-decoration: none;
   padding: 10px 10px;
   margin-bottom: 10px;
-  border-radius: 50px; /* Use border-radius: 50% to make the links circular */
+  border-radius: 50px;
   text-align: center;
-  width: 80%;
+  width: 90%; /* Increase the width of the buttons */
   box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for background-color and color */
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align icon and text to the left */
+  padding-left: 30px; /* Add left padding to align icons */
   text-decoration: none;
   color: #fff;
-  border-radius: 50px; /* Use border-radius: 50% to make the links circular */
+  border-radius: 50px;
   text-align: center;
-  width: 100%; /* fixed width */
+  width: 90%; /* Increase the width of the buttons */
   box-sizing: border-box;
-  padding: 10px; /* added padding */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for background-color and color */
 }
+
 
 .vertical-navbar.closed nav-link {
   border-radius: 50%;
@@ -112,18 +117,16 @@
 
 .vertical-navbar a:hover,
 .vertical-navbar .selected {
-  width: 100%;
-
   background-color: #fff;
   color: #6162FF;
 }
+
 
 .vertical-navbar .selected .button-text {
   color: #6162FF;
 }
 
 .vertical-navbar a .button-icon {
-  margin-right: 10px;
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease-in-out;
 }
@@ -133,9 +136,9 @@
   color: #fff; /* default color */
 }
 
-.vertical-navbar a:hover .home-icon,
-.vertical-navbar .selected .home-icon {
-  color: #6162FF; /* hover/selected color */
+.vertical-navbar a:hover .button-icon,
+.vertical-navbar .selected .button-icon {
+  filter: invert(100%);
 }
 
 .selected .button-icon {
@@ -223,7 +226,7 @@
 
 
 .nav-link .button-text {
-  margin-right: 5px;
+  transition: color 0.3s; /* Add transition for color */
 }
 
 .nav-link .button-icon {
@@ -242,9 +245,8 @@
 }
 
 
-.nav-link:hover .button-icon,
-.nav-link.selected .button-icon {
-  filter: invert(100%);
+.nav-link:hover .button-text,
+.nav-link.selected .button-text {
+  color: #6162FF;
 }
-
 
